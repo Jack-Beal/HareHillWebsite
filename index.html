@@ -22,6 +22,7 @@
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <a href="#contact" class="btn nav__cta">Contact us</a>
       </nav>
     </div>
   </header>
@@ -29,12 +30,20 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="container hero__inner">
-      <p class="hero__eyebrow">Consultancy &amp; Business Support</p>
-      <h1 class="hero__headline">Helping organisations&nbsp;do<br>more of what matters.</h1>
+      <p class="hero__eyebrow">
+        <img src="hare.png" alt="" aria-hidden="true">
+        Consultancy &amp; Business Support
+      </p>
+      <h1 class="hero__headline">Helping organisations&nbsp;do<br>more of <span class="hero__highlight">what matters.</span></h1>
       <p class="hero__sub">Strategic, hands-on support for charities, social enterprises, and purpose-led businesses.</p>
       <a href="#contact" class="btn btn--plum">Work with us</a>
     </div>
   </section>
+
+  <!-- HARE DIVIDER -->
+  <div class="hare-divider" aria-hidden="true">
+    <img src="hare.png" alt="">
+  </div>
 
   <!-- SERVICES -->
   <section class="services" id="services">
@@ -51,6 +60,7 @@
           </div>
           <h3>Online Business Management</h3>
           <p>Day-to-day operational support so you can focus on the work that drives your mission forward.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
         <div class="card">
@@ -59,6 +69,7 @@
           </div>
           <h3>Strategic Support</h3>
           <p>Thinking partner and strategic advisor for planning, decision-making, and organisational development.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
         <div class="card">
@@ -67,6 +78,7 @@
           </div>
           <h3>Funding Application Support</h3>
           <p>Research, writing, and submission support to help you secure the funding your organisation needs.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
         <div class="card">
@@ -75,6 +87,7 @@
           </div>
           <h3>Evaluation &amp; Impact Reporting</h3>
           <p>Robust evaluation frameworks and compelling impact reports that tell your story with evidence.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
         <div class="card">
@@ -83,6 +96,7 @@
           </div>
           <h3>Social Media Content Creation</h3>
           <p>Purposeful content that connects with your audience and reflects the values of your organisation.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
         <div class="card">
@@ -91,22 +105,39 @@
           </div>
           <h3>Event Management</h3>
           <p>End-to-end event support — from concept and logistics to delivery and post-event evaluation.</p>
+          <a class="card__link" href="#">Learn more →</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS / WHO WE WORK WITH -->
   <section class="projects" id="projects">
     <div class="container">
       <div class="section-header">
-        <h2>Projects</h2>
-        <p class="section-sub">A selection of recent work and collaborations.</p>
+        <h2>Who we work with</h2>
+        <p class="section-sub">A selection of the organisations we've had the pleasure of supporting.</p>
       </div>
-      <div class="projects__placeholder">
-        <p>Case studies coming soon.</p>
-        <span>Check back later to see our recent work.</span>
+      <div class="marquee">
+        <div class="marquee__track">
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+          <div class="marquee__item"><span>Client Logo</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -124,14 +155,17 @@
         <div class="about__stat">
           <span class="about__stat-num">10+</span>
           <span class="about__stat-label">Years of experience</span>
+          <img src="hare.png" alt="" aria-hidden="true" class="stat__hare">
         </div>
         <div class="about__stat">
           <span class="about__stat-num">30+</span>
           <span class="about__stat-label">Organisations supported</span>
+          <img src="hare.png" alt="" aria-hidden="true" class="stat__hare">
         </div>
         <div class="about__stat">
           <span class="about__stat-num">£2M+</span>
           <span class="about__stat-label">Funding secured</span>
+          <img src="hare.png" alt="" aria-hidden="true" class="stat__hare">
         </div>
       </div>
     </div>
@@ -167,7 +201,10 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__inner">
-      <span class="footer__logo">Hare Hill</span>
+      <div class="footer__logo">
+        <img src="hare.png" alt="Hare Hill" class="footer__hare">
+        <span>Hare Hill</span>
+      </div>
       <nav class="footer__links">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
@@ -176,6 +213,33 @@
       </nav>
     </div>
   </footer>
+
+  <script>
+    // Nav scroll shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Active nav link via IntersectionObserver
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle(
+              'is-active',
+              link.getAttribute('href') === '#' + entry.target.id
+            );
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
 
 </body>
 </html>
