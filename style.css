@@ -850,6 +850,31 @@ img { display: block; max-width: 100%; }
   line-height: 1.75;
 }
 
+/* ── Services CTA Banner ──────────────────────────────────── */
+.services-cta {
+  background: var(--cream);
+  border-top: 1px solid rgba(110,154,110,0.15);
+  border-bottom: 1px solid rgba(110,154,110,0.15);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.services-cta p {
+  font-size: 1rem;
+  color: var(--ink-mid);
+  font-weight: 300;
+}
+
+.services-cta a {
+  color: var(--plum);
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.services-cta a:hover {
+  color: var(--green-dark);
+}
+
 /* ── About Page ───────────────────────────────────────────── */
 .about-intro {
   padding: 4rem 0;
@@ -911,6 +936,33 @@ img { display: block; max-width: 100%; }
 
 .team-card p:last-child {
   margin-bottom: 0;
+}
+
+/* ── About page section wrappers ──────────────────────────── */
+.team-section {
+  padding: 0 0 5rem;
+  border-top: 1px solid rgba(110,154,110,0.15);
+}
+
+.about-closing-section {
+  background: var(--white);
+  border-top: 1px solid rgba(110,154,110,0.15);
+  padding: 1rem 0 5rem;
+}
+
+/* ── Project card — no image state ───────────────────────── */
+.project-card {
+  min-height: 240px;
+}
+
+.project-card--no-image {
+  background: var(--cream);
+  border: 1px solid rgba(110,154,110,0.2);
+  border-top: 3px solid var(--green-dark);
+}
+
+.project-card--no-image .project-card__body {
+  padding-top: 2.5rem;
 }
 
 .about-closing {

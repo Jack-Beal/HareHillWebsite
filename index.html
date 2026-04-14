@@ -149,7 +149,7 @@
         </a>
 
         <a class="project-card" href="projects.html#the-hive">
-          <img src="img/Eventbrite Header.jpg" alt="The Hive, Coldstream" onerror="this.style.display='none'">
+          <img src="img/Eventbrite Header.jpg" alt="The Hive, Coldstream" onerror="this.style.display='none'; this.closest('.project-card').classList.add('project-card--no-image')">
           <div class="project-card__body">
             <h3>The Hive, Coldstream</h3>
             <p>Structuring and promoting a creative workshop programme</p>
@@ -180,7 +180,8 @@
         <h2>Get in touch</h2>
         <p class="section-sub">Tell us a bit about your organisation and what you need. We'll be in touch within two working days.</p>
       </div>
-      <form class="contact__form" onsubmit="return false;">
+      <!-- TODO: replace REPLACE_WITH_ID with real Formspree form ID -->
+      <form class="contact__form" id="contact-form" action="https://formspree.io/f/REPLACE_WITH_ID" method="POST">
         <div class="form-row form-row--two">
           <div class="form-group">
             <label for="name">Your name</label>
@@ -196,7 +197,9 @@
           <textarea id="message" name="message" rows="6" placeholder="Tell us about your organisation and how we can help..."></textarea>
         </div>
         <button type="submit" class="btn btn--primary">Send message</button>
+        <p id="form-error" hidden style="color: var(--plum); font-size: 0.9rem; margin-top: 0.5rem;">Something went wrong — please try again or email us directly.</p>
       </form>
+      <p id="form-success" hidden style="font-size: 1rem; color: var(--green-dark); font-weight: 500; margin-top: 1.5rem;">Thanks — we'll be in touch within two working days.</p>
     </div>
   </section>
 
@@ -241,6 +244,38 @@
     }, { rootMargin: '-40% 0px -55% 0px' });
 
     sections.forEach(s => observer.observe(s));
+
+    // Contact form — Formspree handler
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg.hidden = true;
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.hidden = true;
+          successMsg.hidden = false;
+        } else {
+          errorMsg.hidden = false;
+          btn.disabled = false;
+          btn.textContent = 'Send message';
+        }
+      } catch {
+        errorMsg.hidden = false;
+        btn.disabled = false;
+        btn.textContent = 'Send message';
+      }
+    });
   </script>
 
 </body>

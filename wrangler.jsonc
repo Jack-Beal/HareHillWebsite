@@ -6,7 +6,8 @@
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    // TODO: move all site files into ./public before deploying via wrangler
+    "directory": "./public"
   },
   "compatibility_flags": [
     "nodejs_compat"
