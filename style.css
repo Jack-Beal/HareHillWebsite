@@ -250,6 +250,35 @@ img { display: block; max-width: 100%; }
   opacity: 0.3;
 }
 
+/* ── Clients & Partners ───────────────────────────────────── */
+.clients {
+  padding: 2rem 0 2.5rem;
+  border-top: 1px solid rgba(110,154,110,0.15);
+}
+
+.clients__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.clients .marquee__item {
+  height: auto;
+  width: auto;
+  padding: 0.75rem 1.5rem;
+}
+
+.clients .marquee__item img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
 /* ── Services ─────────────────────────────────────────────── */
 .services {
   padding: 5rem 0 6rem;
