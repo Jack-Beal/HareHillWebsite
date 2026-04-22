@@ -6,12 +6,30 @@
   <meta name="description" content="HareHill OBM: strategic and hands-on support for charities, social enterprises and purpose-led businesses.">
   <title>HareHill OBM</title>
   <link rel="icon" type="image/png" href="img/hare.png">
+  <link rel="canonical" href="https://harehillobm.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://harehillobm.com/">
+  <meta property="og:title" content="HareHill OBM">
+  <meta property="og:description" content="HareHill OBM: strategic and hands-on support for charities, social enterprises and purpose-led businesses.">
+  <!-- TODO: replace with a proper 1200x630 OG image -->
+  <meta property="og:image" content="https://harehillobm.com/img/HareHill%20Logo.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HareHill OBM">
+  <meta name="twitter:description" content="HareHill OBM: strategic and hands-on support for charities, social enterprises and purpose-led businesses.">
+  <meta name="twitter:image" content="https://harehillobm.com/img/HareHill%20Logo.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
 
   <!-- NAV -->
   <header class="nav" id="nav">
@@ -34,7 +52,7 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="container hero__inner">
+    <div class="container hero__inner" id="main">
       <p class="hero__eyebrow">
         <img src="img/hare.png" alt="" aria-hidden="true">
         Consultancy &amp; Business Support
@@ -94,6 +112,29 @@
         </div>
         <div class="marquee__item">
           <img src="img/Kristien%20Bennett.png" alt="Kristien Bennett" onerror="this.style.display='none'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <section class="stat-strip" aria-label="Outcomes">
+    <div class="container">
+      <div class="stat-strip__grid">
+        <div class="about__stat stat-strip__item">
+          <span class="about__stat-num">2</span>
+          <span class="about__stat-label">Employed positions created at The Loop</span>
+          <img src="img/hare.png" alt="" aria-hidden="true" class="stat__hare">
+        </div>
+        <div class="about__stat stat-strip__item">
+          <span class="about__stat-num">1,500+</span>
+          <span class="about__stat-label">People reached in Grow with Thyme's first 10 days</span>
+          <img src="img/hare.png" alt="" aria-hidden="true" class="stat__hare">
+        </div>
+        <div class="about__stat stat-strip__item">
+          <span class="about__stat-num">National Lottery</span>
+          <span class="about__stat-label">Funding secured for the Berwickshire Reuse Hub</span>
+          <img src="img/hare.png" alt="" aria-hidden="true" class="stat__hare">
         </div>
       </div>
     </div>
@@ -215,13 +256,25 @@
     </div>
   </section>
 
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" aria-label="What clients say">
+    <div class="container">
+      <!-- TODO: Fi to provide real quote -->
+      <figure class="testimonial">
+        <blockquote class="testimonial__quote">
+          [PLACEHOLDER — Fi to replace with real client testimonial. A couple of sentences describing how working with HareHill OBM helped the organisation move forward.]
+        </blockquote>
+        <figcaption class="testimonial__cite">— [Name], [Role], [Organisation]</figcaption>
+      </figure>
+    </div>
+  </section>
+
   <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container about__inner">
       <div class="about__text">
         <h2>About HareHill OBM</h2>
-        <p>HareHill OBM supports purpose led organisations to grow with clarity and strong foundations. Strategic thinking, practical delivery, sitting alongside charities, social enterprises and small businesses to bring structure and momentum.</p>
-        <p>The experience spans education and the third sector. The approach is calm, direct and focused on what lasts. Ideas become plans. Plans get delivered.</p>
+        <p>We sit alongside purpose-led organisations — charities, social enterprises and small businesses — bringing structure, strategy and steady delivery.</p>
         <a href="about.html" class="btn btn--outline">Meet the team →</a>
       </div>
     </div>
@@ -244,6 +297,20 @@
             <label for="email">Email address</label>
             <input type="email" id="email" name="email" placeholder="jane@organisation.org" autocomplete="email">
           </div>
+        </div>
+        <div class="form-group">
+          <label for="enquiry_type">What are you looking for?</label>
+          <select id="enquiry_type" name="enquiry_type">
+            <option value="" disabled selected>Please choose...</option>
+            <option value="Online Business Management">Online Business Management</option>
+            <option value="Strategic Support">Strategic Support</option>
+            <option value="Funding Application Support">Funding Application Support</option>
+            <option value="Evaluation &amp; Impact Reporting">Evaluation &amp; Impact Reporting</option>
+            <option value="Social Media Content Creation">Social Media Content Creation</option>
+            <option value="Website Build &amp; Maintain">Website Build &amp; Maintain</option>
+            <option value="Just having a chat">Just having a chat</option>
+            <option value="Something else">Something else</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
