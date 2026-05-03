@@ -18,7 +18,7 @@
   --font: 'DM Sans', system-ui, sans-serif;
   --container: 1120px;
   --radius: 6px;
-  --nav-h: 64px;
+  --nav-h: 140px;
 }
 
 html {
@@ -118,7 +118,6 @@ img { display: block; max-width: 100%; }
   position: sticky;
   top: 0;
   z-index: 100;
-  height: var(--nav-h);
   background: var(--cream);
   border-bottom: 1px solid rgba(110,154,110,0.18);
   transition: background 0.2s, box-shadow 0.2s;
@@ -131,10 +130,19 @@ img { display: block; max-width: 100%; }
 }
 
 .nav__inner {
-  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  padding: 1rem 0 0.75rem;
+  gap: 0.6rem;
+}
+
+.nav__top {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__logo {
@@ -143,7 +151,7 @@ img { display: block; max-width: 100%; }
 }
 
 .nav__logo-img {
-  height: 50px;
+  height: 90px;
   width: auto;
   display: block;
 }
@@ -152,6 +160,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 2rem;
   align-items: center;
+  justify-content: center;
 }
 
 .nav__links a {
@@ -1055,12 +1064,14 @@ img { display: block; max-width: 100%; }
 @media (max-width: 768px) {
   .nav__hamburger {
     display: flex;
+    position: absolute;
+    right: 0;
   }
 
   .nav__links {
     display: none;
     position: absolute;
-    top: var(--nav-h);
+    top: 100%;
     left: 0;
     right: 0;
     background: var(--cream);
