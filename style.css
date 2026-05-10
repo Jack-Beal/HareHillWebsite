@@ -671,6 +671,28 @@ img { display: block; max-width: 100%; }
   margin-bottom: 0.75rem;
 }
 
+.projects__past-label {
+  grid-column: 1 / -1;
+  padding: 0.5rem 0 0.25rem;
+  border-top: 2px solid rgba(110,154,110,0.18);
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ink-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-card--past {
+  border-top-color: var(--green-light);
+  opacity: 0.85;
+}
+
+.project-card--past:hover {
+  opacity: 1;
+  border-top-color: var(--green-dark);
+}
+
 /* ── Page Hero (inner pages) ──────────────────────────────── */
 .page-hero {
   padding: 4rem 0 3rem;
